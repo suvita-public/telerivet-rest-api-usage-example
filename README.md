@@ -118,8 +118,8 @@ import pandas as pd
 from telerivet_connector import add_contacts
 
 data = pd.DataFrame([
-    {"mobile": "+911234567890", "full_name": "Priya Sharma", "village": "Pune"},
-    {"mobile": "+919876543210", "full_name": "Anita Verma",  "village": "Mumbai"},
+    {"mobile": "+911000000000", "full_name": "Suvita Suvita", "village": "Pune"},
+    {"mobile": "+911000000000", "full_name": "Suvita Suvita",  "village": "Mumbai"},
 ])
 
 col_mapping = {
