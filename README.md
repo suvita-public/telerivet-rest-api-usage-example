@@ -4,9 +4,13 @@ A minimal Python package demonstrating how to use the [Telerivet REST API Python
 
 ## Why this exists
 
-This code was extracted from a production SMS reminder pipeline built for [Suvita](https://suvita.org/)'s maternal health program in India. The original pipeline handled the full workflow — SurveyCTO form submissions, SQLAlchemy ORM, fuzzy name matching, scheduled reminders — but the Telerivet API interaction layer was buried inside it.
+This code was extracted from a production batch job built for [Suvita](https://suvita.org/)'s maternal health SMS reminder programme in India. That pipeline does three main things:
 
-This package strips out all the domain-specific logic and keeps only the reusable Telerivet patterns: config loading, cursor iteration with retry logic, label/group ID resolution, timestamp utilities, and contact upsert. If you're building anything on top of Telerivet in Python, this is a working reference.
+1. **Enrol caregivers into Telerivet** — eligible caregiver contacts are pulled from Suvita's database and added to Telerivet so they can start receiving SMS reminders.
+2. **Pull data back from Telerivet** — contacts, messages, delivery status, groups, and metadata are regularly fetched and stored in Suvita's database, so programme stats don't depend solely on Telerivet.
+3. **Keep the database as the source of truth** — enrolments, messages sent, delivery outcomes, and failures are all tracked from one place. Old contacts and messages are also cleaned up from Telerivet over time, but their history remains in the database.
+
+This package strips out all the domain-specific logic and keeps only the reusable Telerivet API patterns: config loading, cursor iteration with retry logic, label/group ID resolution, timestamp utilities, and contact upsert. If you're building anything on top of Telerivet in Python, this is a working reference.
 
 ## Installation
 
