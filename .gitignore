@@ -1,0 +1,17 @@
+# Secrets / local config — never commit these
+appconfig.ini
+*.bak
+
+# Build / dist
+dist/
+build/
+*.egg-info/
+
+# Python
+*.pyc
+__pycache__/
+
+# Virtual environments
+.venv/
+venv/
+env/

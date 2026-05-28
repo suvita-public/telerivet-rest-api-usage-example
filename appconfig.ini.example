@@ -1,0 +1,6 @@
+[telerivet_info]
+api_key = YOUR_TELERIVET_API_KEY_HERE
+project_id = YOUR_PROJECT_ID_HERE
+
+# Add additional project IDs as needed, e.g.:
+# project_id_staging = YOUR_STAGING_PROJECT_ID_HERE

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "telerivet-rest-api-usage-example"
+version = "1.0.0"
+description = "Example library demonstrating Telerivet REST API usage patterns"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "telerivet",
+    "pandas",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["telerivet_connector*"]
